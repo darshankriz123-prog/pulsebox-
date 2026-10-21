@@ -1,0 +1,5 @@
+server/.cache/
+server/.deps/
+*.pyc
+__pycache__/
+

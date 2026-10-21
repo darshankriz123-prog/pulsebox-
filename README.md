@@ -4,7 +4,7 @@ A personal music player and MP4-to-MP3 website prototype. It can play audio file
 
 ## Try it locally on Windows
 
-1. Right-click `Start-Pulsebox.ps1` and choose **Run with PowerShell**. Python 3.10 or newer is required. The included `yt-dlp` wheel is unpacked on first run; no account is needed.
+1. Right-click `Start-Pulsebox.ps1` and choose **Run with PowerShell**. Python 3.10 or newer is required. The `yt-dlp` wheel is unpacked on first run (downloaded from PyPI if absent); no account is needed.
 2. Open <http://127.0.0.1:4173/> if the browser does not open automatically.
 3. Paste a YouTube link, a direct MP4 URL, or choose an MP4 file. YouTube links are fetched by the local helper. FFmpeg WebAssembly converts the audio to MP3 in your browser.
 4. Run `Stop-Pulsebox.ps1` when finished.
