@@ -13,7 +13,7 @@ The local helper accepts YouTube videos up to 30 minutes and 100 MB. Some videos
 
 ## GitHub Pages
 
-The static website can be served from the repository root on GitHub Pages. Audio files and uploaded MP4 files are processed locally in the browser. Direct MP4 links require the video host to allow cross-origin downloads. YouTube links also need the local helper at `http://127.0.0.1:4173` or a separate hosted service configured in `config.js`; GitHub Pages cannot run the helper itself.
+The static website can be served from the repository root on GitHub Pages. Audio files and uploaded MP4 files are processed locally in the browser. Direct MP4 links require the video host to allow cross-origin downloads. YouTube links use the local helper at `http://127.0.0.1:4173` when it is running; GitHub Pages cannot run the helper itself. Browsers that block public-site requests to a local address can use the local site instead.
 
 ## Project files
 
