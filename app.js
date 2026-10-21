@@ -118,6 +118,9 @@
     let inputName;
     const outputName = `youtube-${stamp}.mp3`;
     try {
+      if (location.hostname.endsWith('.github.io') && !window.PULSEBOX_API_BASE) {
+        throw new Error('YouTube conversion runs in the local prototype. Download the repository, run Start-Pulsebox.ps1, and open http://127.0.0.1:4173/.');
+      }
       const base = (window.PULSEBOX_API_BASE || '').replace(/\/$/, '');
       const response = await fetch(`${base}/api/convert`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: url.href }) });
       if (!response.ok) { const body = await response.json().catch(() => ({})); throw new Error(body.error || `YouTube service returned HTTP ${response.status}`); }
